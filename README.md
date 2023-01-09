@@ -1,2 +1,2 @@
 # WeatherDataVisualization
-I record a video to illustrate my program, meeting_01.
+I record a video, meeting_01.mp3, to illustrate my program.
