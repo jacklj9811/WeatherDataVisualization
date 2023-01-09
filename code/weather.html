@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"> 
+  <head>
+    <title>[csv]This is a title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	  <link rel="stylesheet" href="d3.slider.css" />  
+	  <style>
+
+	    body {
+	      font-family: Verdana,Arial,sans-serif;
+	    }
+	    .wrapper {
+	      width: 2856px;
+	      margin-left: auto;
+	      margin-right: auto;
+	      /*background-color:#f00;*/
+	    }
+	    .wrapper > div {
+	      margin: 35px 256px 8px 1600px;
+	    }
+
+	    #slider1 {
+	      left: 26px;
+/*	      height: 10px;
+*/	    }
+
+	    #slider2 {
+	      height: 600px;
+	    }
+
+	    .main{
+	    	width: 2856px;
+		    margin-left: auto;
+		    margin-right: auto;
+			/*background-color:#0f0;*/
+	    }
+		.main > div {
+	      margin: 0px 0px 0px 0px;
+	    }
+	    .main .mostleft{
+	        width:1600px;
+	        height:640px;
+	        /*right:230px;*/
+	        top:0;
+	            /*background-color:#0f0;*/
+	            float:left;
+	    }
+	    .main .left{
+	        width:26px;
+		    height: 600px;
+/*		    background-color:#f00;
+*/			float:left;
+
+	    }
+	    .main .mid{
+	        width:1000px;
+	        height:600px;
+	        right:0px;
+	        top:0;
+	            background-color:#0f0;
+	            float:left;
+	    }	    
+	    .main .right{
+	        width:230px;
+	        height:600px;
+	        /*right:230px;*/
+	        top:0;
+	            /*background-color:#0f0;*/
+	            float:left;
+	    }	    
+    	.paraL {
+	      width: 2456px;
+	      /*position: absolute;*/
+	      /*top: 1000px;*/
+
+	      margin-left: auto;
+	      margin-right: auto;
+	      /*
+	      margin-left: auto;
+	      margin-right: auto;*/
+	      /*background-color:#f00;*/
+	    }
+	    .paraL > div {
+	      margin: 650px 0px 0px 0px;
+	    }
+    	.pre1 {
+	      width: 2456px;
+	      /*position: absolute;*/
+	      /*top: 1000px;*/
+
+	      margin-left: auto;
+	      margin-right: auto;
+	      /*
+	      margin-left: auto;
+	      margin-right: auto;*/
+	      /*background-color:#f00;*/
+	    }
+	    .pre1 > div {
+	      margin: 0px 0px 0px 0px;
+	    }
+	    .city {
+	      width: 2456px;
+	      /*position: absolute;*/
+	      /*top: 1000px;*/
+
+	      margin-left: auto;
+	      margin-right: auto;
+	      /*
+	      margin-left: auto;
+	      margin-right: auto;*/
+	      /*background-color:#f00;*/
+	    }
+	    .city > div {
+	      margin: 0px 0px 0px 0px;
+	    }
+	    #parcoords {
+	      left: 0px;
+	    }	    
+/*	    #squares {
+	      left: 26px;
+	    }*/
+    }
+    
+
+	  </style>
+
+  </head>
+  <body>
+    <!-- <script src="./weather.js"  charset="utf-8"></script>  -->
+	<script src="./d3.js"></script> <!--引用包d3.v6.js-->
+	<script>
+		d3version6 = d3
+	  	window.d3 = null
+	</script>
+	<script src="./d3.v4.js"></script> <!--引用包d3.v6.js-->
+	<script>
+		d3version4 = d3
+	  	window.d3 = null
+	</script>
+	  <!-- 这边的d3是d3v3min版本的！而d3version6是d3v6版本的！！务必注意！！ -->
+	  <!-- 这边的d3是d3v3min版本的！而d3version6是d3v6版本的！！务必注意！！ -->
+	  <!-- 这边的d3是d3v3min版本的！而d3version6是d3v6版本的！！务必注意！！ -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="d3.slider.js"></script>
+	<div class="wrapper">
+	      	<div id="slider1"></div>
+	</div>
+	<div class="main">
+		<div class="mostleft">
+			<div id='squares'></div>
+		</div>
+		<div class="left">
+			<div id = "slider2"></div>
+		</div>
+		<div class="mid">
+			<div id='map' style='width: 1000px; height: 600px;'></div>
+		</div>
+		<div class="right">
+			<h1> O3污染溯源</h1>
+			<div id="div_template"></div>
+		</div>
+	</div>
+	<div class="paraL">
+	    <div id="parallel"></div>
+	</div>
+	<div class="pre1">
+	    <div id="tablepre"></div>
+	</div>
+	<div class="city">
+		<div id="city_shift"></div>		
+	</div>
+	<script src="render-queue.js"></script>
+	<link rel="stylesheet" href="style.css"></link>
+
+	<script src="./pollution_map_part1_v1.js" charset="utf-8"></script>
+  </body>
+</html>
+
